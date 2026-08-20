@@ -1,57 +1,12 @@
 import React from "react";
 import {
   ArrowRight,
-  BarChart3,
   BrainCircuit,
   Check,
-  Search,
-  Megaphone,
-  PenTool,
-  Target,
-  Users,
-  Sparkles,
   ChevronRight,
+  Sparkles,
 } from "lucide-react";
 import { Link } from "react-router-dom";
-
-const services = [
-  {
-    icon: Search,
-    title: "Search Engine Optimization",
-    text: "Build sustainable visibility and attract high-intent organic traffic.",
-    tag: "SEO",
-  },
-  {
-    icon: Megaphone,
-    title: "Social Media Marketing",
-    text: "Create communities, conversations and content people remember.",
-    tag: "SMM",
-  },
-  {
-    icon: Target,
-    title: "Performance Marketing",
-    text: "Turn ad spend into measurable leads, sales and revenue.",
-    tag: "ADS",
-  },
-  {
-    icon: PenTool,
-    title: "Content Marketing",
-    text: "Strategic content that educates, earns trust and drives action.",
-    tag: "CONTENT",
-  },
-  {
-    icon: Users,
-    title: "Lead Generation",
-    text: "Build predictable pipelines with conversion-focused campaigns.",
-    tag: "LEADS",
-  },
-  {
-    icon: BarChart3,
-    title: "Analytics & CRO",
-    text: "Find what is working, fix what is not and scale smarter.",
-    tag: "DATA",
-  },
-];
 
 function CTA() {
   return (
@@ -285,6 +240,7 @@ export default function Home() {
         </div>
 
       </section>
+
 
       {/* ================= AILYTICKS APPROACH ================= */}
 
