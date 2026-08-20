@@ -286,12 +286,6 @@ export default function Home() {
 
       </section>
 
-
-      {/* ================= SERVICES ================= */}
-
-  
-
-
       {/* ================= AILYTICKS APPROACH ================= */}
 
       <section className="dark-section">
