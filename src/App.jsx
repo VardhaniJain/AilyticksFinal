@@ -157,7 +157,7 @@ function Footer() {
         <div>
           <h4>Explore</h4>
 
-          <Link to="/about">About</Link>
+          <Link to="/about-us ">About</Link>
           <Link to="/services">Services</Link>
           <Link to="/work">Our Work</Link>
           <Link to="/blog">Blog</Link>
