@@ -17,11 +17,7 @@ function CTA() {
           <p className="eyebrow">
             LET'S GROW
           </p>
-
-          <h2>
-            Ready to turn clicks into customers?
-          </h2>
-
+          
           <p>
             Tell us where you want to go.
             We'll map the strategy to get you there.
