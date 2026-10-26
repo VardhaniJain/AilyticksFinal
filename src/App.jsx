@@ -18,7 +18,7 @@ import { Routes, Route, Link } from "react-router-dom";
 
 // Import your modular pages
 import Contact from "./Pages/Contact";
-
+import Home from "./Pages/Home";
 function Navbar() {
   const [open, setOpen] = useState(false);
   return (
