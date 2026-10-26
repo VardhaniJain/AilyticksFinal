@@ -5,102 +5,39 @@ import {
   Search, 
   Megaphone, 
   Target, 
-  PenTool, 
-  Users, 
-  BarChart3,
-  Cloud,
-  ShoppingCart,
-  Building2,
-  TrendingUp,
-  Stethoscope,
-  GraduationCap,
-  Briefcase,
-  HeartHandshake,
-  UtensilsCrossed,
-  Factory
+  CloudRain, 
+  ShoppingCart, 
+  Building2, 
+  TrendingUp, 
+  Stethoscope, 
+  GraduationCap, 
+  Briefcase, 
+  HeartHandshake, 
+  UtensilsCrossed, 
+  Factory,
+  MessageCircle
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function Home() {
-  const challenges = [
-    { 
-      title: "I want more visibility.", 
-      desc: "Build awareness, attention and build trust over time.", 
-      linkText: "Find SEO help", 
-      linkTo: "/services",
-      icon: Search 
-    },
-    { 
-      title: "I want more engagement.", 
-      desc: "Build visitor engagement with funnels, landing pages and follow-ups.", 
-      linkText: "Explore SMM", 
-      linkTo: "/services",
-      icon: Megaphone 
-    },
-    { 
-      title: "I want more leads.", 
-      desc: "Turn visitors into enquiries that explore Performance Ads.", 
-      linkText: "Explore Performance Ads", 
-      linkTo: "/services",
-      icon: Target 
-    },
-    { 
-      title: "I want better conversions.", 
-      desc: "Optimize user journeys to turn clicks into loyal customers.", 
-      linkText: "Explore Content Strategy", 
-      linkTo: "/services",
-      icon: PenTool 
-    },
-    { 
-      title: "I want tailored brand guidance.", 
-      desc: "Shape a unique identity that resonates with your core audience.", 
-      linkText: "Explore Brand Identity", 
-      linkTo: "/services",
-      icon: Users 
-    },
-    { 
-      title: "I want more online sales.", 
-      desc: "Scale your revenue streams with data-driven e-commerce systems.", 
-      linkText: "Explore Lead Generation", 
-      linkTo: "/services",
-      icon: BarChart3 
-    }
-  ];
-
-  const industriesLine1 = [
-    { name: "Tech & SaaS", icon: Cloud },
-    { name: "E-commerce", icon: ShoppingCart },
-    { name: "Real Estate", icon: Building2 },
-    { name: "Fintech", icon: TrendingUp },
-    { name: "Healthcare", icon: Stethoscope }
-  ];
-
-  const industriesLine2 = [
-    { name: "Education", icon: GraduationCap },
-    { name: "Professional Services", icon: Briefcase },
-    { name: "Non-Profits", icon: HeartHandshake },
-    { name: "Hospitality", icon: UtensilsCrossed },
-    { name: "Manufacturing", icon: Factory }
-  ];
-
   return (
     <>
-      {/* Hero Section */}
-      <section className="hero" style={{ padding: "90px 0 100px", background: "#120E2E" }}>
-        <div className="container" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "60px", alignItems: "center" }}>
-          <div>
-            <div style={{ display: "inline-flex", alignItems: "center", gap: "8px", background: "rgba(255,247,0,0.1)", color: "#FFF700", padding: "8px 14px", borderRadius: "999px", fontSize: "13px", fontWeight: "700", marginBottom: "24px" }}>
-              <Sparkles size={15} /> Performance-focused digital systems
+      {/* 1. HERO SECTION */}
+      <section className="hero-section">
+        <div className="container hero-grid-layout">
+          <div className="hero-left-col">
+            <div className="hero-badge">
+              <Sparkles size={14} /> Performance-focused digital systems
             </div>
-            <h1 style={{ fontSize: "clamp(2.8rem, 5vw, 5.2rem)", fontWeight: "800", lineHeight: "1.1", marginBottom: "24px", fontFamily: "Montserrat" }}>
-              Make your brand <span style={{ color: "#FFF700" }}>impossible to ignore.</span>
+            <h1>
+              Make your brand <span>impossible to ignore.</span>
             </h1>
-            <p style={{ color: "#9ca3af", fontSize: "18px", marginBottom: "32px" }}>
-              We are Ailyticks, a performance-focused digital marketing agency designed to build trust and convert attention into growth.
+            <p>
+              We are Ailyticks, a performance focused digital marketing agency designed to build trust and convert attention into growth for you.
             </p>
-            <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
+            <div className="hero-btn-group">
               <Link to="/contact" className="btn btn-primary">
-                Start a conversation <ArrowRight size={18} />
+                Start a conversation <ArrowRight size={16} />
               </Link>
               <Link to="/services" className="btn btn-ghost">
                 See our services
@@ -108,79 +45,116 @@ export default function Home() {
             </div>
           </div>
 
-          <div style={{ position: "relative", background: "rgba(255,255,255,0.03)", padding: "30px", borderRadius: "28px", border: "1px solid rgba(255,255,255,0.08)" }}>
-            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "20px" }}>
-              <span style={{ fontSize: "12px", fontWeight: "800", color: "#9ca3af" }}>Smart - dashboard</span>
-              <span style={{ color: "#07905d", fontSize: "12px", fontWeight: "800" }}>● LIVE</span>
-            </div>
-            <div style={{ marginBottom: "25px" }}>
-              <small style={{ color: "#9ca3af" }}>Campaign performance</small>
-              <strong style={{ display: "block", fontSize: "48px", fontFamily: "Montserrat", color: "#FFF700" }}>+184%</strong>
-              <span style={{ color: "#9ca3af", fontSize: "13px" }}>↑ 28.6% this month</span>
-            </div>
-            <div style={{ display: "flex", gap: "8px", alignItems: "flex-end", height: "100px", marginBottom: "20px" }}>
-              {[40, 55, 48, 70, 65, 85, 80, 95, 90, 100].map((h, i) => (
-                <div key={i} style={{ flex: 1, height: `${h}%`, background: "#FFF700", borderRadius: "4px 4px 0 0" }}></div>
-              ))}
+          <div className="hero-right-col">
+            <div className="dash-card">
+              <div className="dash-card-header">
+                <span>Smart - dashboard</span>
+                <span className="live-badge">● LIVE</span>
+              </div>
+              <div className="dash-campaign-title">Campaign conference</div>
+              <div className="dash-metric-value">+184%</div>
+              <div className="dash-subtext">↑ 28.6% this month</div>
+              
+              <div className="dash-chart-bars">
+                {[40, 52, 45, 68, 62, 80, 75, 92, 88, 100].map((h, i) => (
+                  <div key={i} className="bar" style={{ height: `${h}%` }}></div>
+                ))}
+              </div>
+
+              <div className="dash-footer-stats">
+                <div>
+                  <small>Reach</small>
+                  <strong>1.84M</strong>
+                </div>
+                <div>
+                  <small>Conversion</small>
+                  <strong>12.6K</strong>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Marketing Challenges Section (6 Cards) */}
-      <section style={{ padding: "80px 0", background: "#000000", textAlign: "center" }}>
+      {/* 2. BUILT FOR MEASURABLE GROWTH STRIP */}
+      <section className="growth-strip">
+        <div className="container growth-strip-inner">
+          <strong>Built for measurable growth</strong>
+          <span className="dot-sep">•</span>
+          <span>Clear reporting</span>
+          <span className="dot-sep">•</span>
+          <span>Omnichannel access</span>
+          <span className="dot-sep">•</span>
+          <span>Proven systems</span>
+          <span className="dot-sep">•</span>
+          <span>Paid ad sessions</span>
+        </div>
+      </section>
+
+      {/* 3. MARKETING CHALLENGE CARDS SECTION */}
+      <section className="challenge-section">
         <div className="container">
-          <p className="eyebrow" style={{ color: "#FFF700", fontSize: "12px", fontWeight: "800", letterSpacing: "0.15em", marginBottom: "12px" }}>FIND YOUR FIT</p>
-          <h2 style={{ fontSize: "36px", marginBottom: "40px", fontFamily: "Montserrat" }}>What's your biggest marketing challenge right now?</h2>
-          
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "24px" }}>
-            {challenges.map((item, idx) => {
-              const IconComponent = item.icon;
-              return (
-                <div key={idx} style={{ background: "#120E2E", border: "1px solid rgba(255,255,255,0.1)", padding: "32px", borderRadius: "24px", textAlign: "left", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
-                  <div>
-                    <div style={{ width: "44px", height: "44px", background: "rgba(255,247,0,0.1)", color: "#FFF700", display: "grid", placeItems: "center", borderRadius: "12px", marginBottom: "20px" }}>
-                      <IconComponent size={22} />
-                    </div>
-                    <h3 style={{ fontSize: "20px", marginBottom: "12px", fontFamily: "Montserrat" }}>{item.title}</h3>
-                    <p style={{ color: "#9ca3af", fontSize: "14px", marginBottom: "24px" }}>{item.desc}</p>
-                  </div>
-                  <Link to={item.linkTo} className="btn btn-primary" style={{ width: "100%", textAlign: "center" }}>
-                    {item.linkText}
-                  </Link>
-                </div>
-              );
-            })}
+          <p className="eyebrow-center">FIND YOUR FIT</p>
+          <h2>What's your biggest marketing challenge right now?</h2>
+          <p className="challenge-subtitle">Choose an option to let us guide you straight to right services.</p>
+
+          <div className="challenge-grid">
+            {/* Card 1 */}
+            <div className="challenge-card">
+              <div className="challenge-icon-box"><Search size={22} /></div>
+              <h3>I want more visibility.</h3>
+              <p>I want more visibility, attention and builds trust over time.</p>
+              <Link to="/contact" className="btn btn-primary card-cta">
+                Find SEO help
+              </Link>
+            </div>
+
+            {/* Card 2 */}
+            <div className="challenge-card">
+              <div className="challenge-icon-box"><Megaphone size={22} /></div>
+              <h3>I want more engagement.</h3>
+              <p>I want visitors engagement funnels, landing... and follow-ups.</p>
+              <Link to="/contact" className="btn btn-primary card-cta">
+                Explore SMM
+              </Link>
+            </div>
+
+            {/* Card 3 */}
+            <div className="challenge-card">
+              <div className="challenge-icon-box"><Target size={22} /></div>
+              <h3>I want more leads.</h3>
+              <p>Turn visitors into enquiries that explore Performance Ads.</p>
+              <Link to="/contact" className="btn btn-primary card-cta">
+                Explore Performance Ads
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Who We Help Section (Horizontal 2 Lines with Industry Icons) */}
-      <section style={{ padding: "80px 0", background: "#120E2E", textAlign: "center" }}>
+      {/* 4. WHO WE HELP SECTION */}
+      <section className="industries-section">
         <div className="container">
-          <h2 style={{ fontSize: "36px", marginBottom: "50px", fontFamily: "Montserrat" }}>Who we help</h2>
+          <h2>Who we help</h2>
           
-          {/* Line 1 */}
-          <div style={{ display: "flex", justifyContent: "center", flexWrap: "wrap", gap: "16px", marginBottom: "16px" }}>
-            {industriesLine1.map((ind, idx) => {
-              const IconComp = ind.icon;
+          <div className="industries-grid">
+            {[
+              { label: "Tech & SaaS", icon: CloudRain },
+              { label: "E-commerce", icon: ShoppingCart },
+              { label: "Real Estate", icon: Building2 },
+              { label: "Fintech", icon: TrendingUp },
+              { label: "Healthcare", icon: Stethoscope },
+              { label: "Education", icon: GraduationCap },
+              { label: "Professional Services", icon: Briefcase },
+              { label: "Non-Profits", icon: HeartHandshake },
+              { label: "Hospitality", icon: UtensilsCrossed },
+              { label: "Manufacturing", icon: Factory },
+            ].map((ind, idx) => {
+              const Icon = ind.icon;
               return (
-                <div key={idx} style={{ display: "flex", alignItems: "center", gap: "10px", background: "#000000", border: "1px solid rgba(255,255,255,0.1)", padding: "12px 24px", borderRadius: "999px", color: "#FFFFFF" }}>
-                  <IconComp size={18} style={{ color: "#FFF700" }} />
-                  <span style={{ fontSize: "14px", fontWeight: "600" }}>{ind.name}</span>
-                </div>
-              );
-            })}
-          </div>
-
-          {/* Line 2 */}
-          <div style={{ display: "flex", justifyContent: "center", flexWrap: "wrap", gap: "16px" }}>
-            {industriesLine2.map((ind, idx) => {
-              const IconComp = ind.icon;
-              return (
-                <div key={idx} style={{ display: "flex", alignItems: "center", gap: "10px", background: "#000000", border: "1px solid rgba(255,255,255,0.1)", padding: "12px 24px", borderRadius: "999px", color: "#FFFFFF" }}>
-                  <IconComp size={18} style={{ color: "#FFF700" }} />
-                  <span style={{ fontSize: "14px", fontWeight: "600" }}>{ind.name}</span>
+                <div key={idx} className="industry-pill">
+                  <Icon size={20} />
+                  <span>{ind.label}</span>
                 </div>
               );
             })}
@@ -188,23 +162,29 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Bottom Conversion Banner */}
-      <section style={{ background: "#FFF700", color: "#000000", padding: "80px 0", textAlign: "center" }}>
-        <div className="container" style={{ maxWidth: "800px" }}>
-          <span style={{ fontSize: "12px", fontWeight: "800", letterSpacing: "0.15em", textTransform: "uppercase", display: "block", marginBottom: "12px" }}>Ready when you are</span>
-          <h2 style={{ fontSize: "clamp(2.2rem, 4vw, 3.2rem)", fontFamily: "Montserrat", fontWeight: "800", marginBottom: "20px", color: "#000000" }}>
-            Your next customer is searching right now.
-          </h2>
-          <p style={{ color: "#333333", fontSize: "16px", marginBottom: "35px" }}>
+      {/* 5. MASSIVE YELLOW CONVERSION BANNER */}
+      <section className="yellow-cta-section">
+        <div className="container yellow-content">
+          <p className="ready-eyebrow">READY WHEN YOU ARE</p>
+          <h2>Your next customer is searching right now.</h2>
+          <h2>Your next customer is searching right now.</h2>
+          <p className="yellow-desc">
             Let's make sure they find you. Tell us your goal and we'll show you the plan to reach it.
           </p>
-          <div style={{ display: "flex", justifyContent: "center", gap: "16px", flexWrap: "wrap" }}>
-            <Link to="/contact" style={{ background: "#000000", color: "#FFF700", padding: "14px 28px", borderRadius: "999px", fontWeight: "800", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "8px" }}>
-              Book a strategy call <ArrowRight size={18} />
+
+          <div className="yellow-actions">
+            <Link to="/contact" className="btn btn-black">
+              Book a strategy call <ArrowRight size={16} />
             </Link>
-            <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" style={{ background: "transparent", color: "#000000", border: "2px solid #000000", padding: "14px 28px", borderRadius: "999px", fontWeight: "800", textDecoration: "none" }}>
-              Chat on WhatsApp
+            <a href="https://whatsapp.com" target="_blank" rel="noreferrer" className="btn btn-outline-black">
+              <MessageCircle size={16} /> Chat on WhatsApp
             </a>
+          </div>
+
+          <div className="yellow-perks">
+            <span>✓ Reply within one working day</span>
+            <span>✓ No long services</span>
+            <span>✓ Chatting firm day one</span>
           </div>
         </div>
       </section>
