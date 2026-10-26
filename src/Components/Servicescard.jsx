@@ -1,171 +1,33 @@
 import React from "react";
-import { Search, Megaphone, Target, PenTool, Users, BarChart3 } from "lucide-react";
+import { Search, Megaphone, Target, PenTool, Users, BarChart3, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import ServiceCard from "./ServiceCard";
 
 const services = [
-  {
-    number: "01",
-    icon: Search,
-    tag: "SEO",
-    title: "Search Engine Optimization",
-    description:
-      "Build sustainable search visibility and attract high-intent customers through a strategic SEO system.",
-    features: [
-      "Technical SEO",
-      "Keyword Research",
-      "On-page SEO",
-      "Content SEO",
-    ],
-  },
-
-  {
-    number: "02",
-    icon: Megaphone,
-    tag: "SMM",
-    title: "Social Media Marketing",
-    description:
-      "Build a recognizable social presence with content that creates conversations and brand loyalty.",
-    features: [
-      "Social Media Strategy",
-      "Content Planning",
-      "Creative Direction",
-      "Community Management",
-    ],
-  },
-
-  {
-    number: "03",
-    icon: Target,
-    tag: "ADS",
-    title: "Performance Marketing",
-    description:
-      "Turn paid media into a predictable growth channel with data-driven campaigns.",
-    features: [
-      "Google Ads",
-      "Meta Ads",
-      "Audience Targeting",
-      "Conversion Optimization",
-    ],
-  },
-
-  {
-    number: "04",
-    icon: PenTool,
-    tag: "CONTENT",
-    title: "Content Marketing",
-    description:
-      "Create valuable content that earns attention, builds authority and drives action.",
-    features: [
-      "Content Strategy",
-      "Blog Content",
-      "Website Copy",
-      "Social Content",
-    ],
-  },
-
-  {
-    number: "05",
-    icon: Users,
-    tag: "LEADS",
-    title: "Lead Generation",
-    description:
-      "Create a consistent pipeline of qualified prospects using targeted campaigns.",
-    features: [
-      "Lead Generation",
-      "Landing Pages",
-      "Lead Magnets",
-      "Funnel Strategy",
-    ],
-  },
-
-  {
-    number: "06",
-    icon: BarChart3,
-    tag: "DATA",
-    title: "Analytics & CRO",
-    description:
-      "Understand what is working and continuously improve your digital performance.",
-    features: [
-      "Analytics Setup",
-      "Conversion Tracking",
-      "Funnel Analysis",
-      "A/B Testing",
-    ],
-  },
+  { number: "01", icon: Search, tag: "SEO", title: "Search Engine Optimization", description: "Build sustainable search visibility and attract high-intent customers." },
+  { number: "02", icon: Megaphone, tag: "SMM", title: "Social Media Marketing", description: "Build a recognizable social presence with content that creates loyalty." },
+  { number: "03", icon: Target, tag: "ADS", title: "Performance Marketing", description: "Turn paid media into a predictable growth channel with data-driven campaigns." }
 ];
 
-export default function ServicesSection({ preview = false }) {
-  const displayedServices = preview
-    ? services.slice(0, 3)
-    : services;
-
+export default function Servicescard() {
   return (
-    <section className="section services-section">
-
-      <div className="container">
-
-        {/* Section heading */}
-
-        <div className="section-head">
-
-          <div>
-            <p className="eyebrow">
-              WHAT WE DO
-            </p>
-
-            <h2>
-              Digital marketing
-              <br />
-              built for growth.
-            </h2>
-          </div>
-
-          <p>
-            We combine strategy, creativity and
-            data to help ambitious brands become
-            more visible, generate demand and grow.
-          </p>
-
-        </div>
-
-
-        {/* Service cards */}
-
-        <div className="service-detail-grid">
-
-          {displayedServices.map((service) => (
-            <ServiceCard
-              key={service.number}
-              number={service.number}
-              icon={service.icon}
-              tag={service.tag}
-              title={service.title}
-              description={service.description}
-              features={service.features}
-            />
-          ))}
-
-        </div>
-
-
-        {/* View all services */}
-
-        {preview && (
-          <div className="services-more">
-
-            <Link
-              to="/services"
-              className="btn btn-primary"
-            >
-              View all services
+    <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "24px" }}>
+      {services.map((s) => {
+        const Icon = s.icon;
+        return (
+          <div key={s.number} style={{ background: "#000000", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "24px", padding: "32px", position: "relative" }}>
+            <span style={{ position: "absolute", top: "28px", right: "28px", color: "rgba(255,255,255,0.2)", fontSize: "20px", fontWeight: "800" }}>{s.number}</span>
+            <div style={{ width: "48px", height: "48px", background: "rgba(255,247,0,0.1)", color: "#FFF700", display: "grid", placeItems: "center", borderRadius: "12px", marginBottom: "20px" }}>
+              <Icon size={24} />
+            </div>
+            <span style={{ fontSize: "11px", fontWeight: "800", color: "#FFF700", display: "block", marginBottom: "8px" }}>{s.tag}</span>
+            <h3 style={{ fontSize: "20px", marginBottom: "12px" }}>{s.title}</h3>
+            <p style={{ color: "#9ca3af", fontSize: "14px", marginBottom: "24px" }}>{s.description}</p>
+            <Link to="/services" style={{ color: "#FFF700", fontWeight: "700", fontSize: "14px", display: "inline-flex", alignItems: "center", gap: "6px" }}>
+              Learn more <ArrowRight size={16} />
             </Link>
-
           </div>
-        )}
-
-      </div>
-
-    </section>
+        );
+      })}
+    </div>
   );
 }

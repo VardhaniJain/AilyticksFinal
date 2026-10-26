@@ -1,220 +1,45 @@
 import React, { useState } from "react";
-import {
-  ArrowRight,
-  CheckCircle2,
-} from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 
 export default function Form() {
-
   const [submitted, setSubmitted] = useState(false);
 
-
-  const handleSubmit = (event) => {
-
-    event.preventDefault();
-
+  const handleSubmit = (e) => {
+    e.preventDefault();
     setSubmitted(true);
-
   };
 
-
   if (submitted) {
-
     return (
-      <div className="form-success">
-
-        <CheckCircle2 size={48} />
-
-        <h2>
-          Thanks for reaching out!
-        </h2>
-
-        <p>
-          Your enquiry has been received.
-          Our team will get back to you
-          shortly.
-        </p>
-
-        <button
-          className="btn btn-primary"
-          onClick={() => setSubmitted(false)}
-        >
-          Send another enquiry
-        </button>
-
+      <div style={{ textAlign: "center", padding: "40px", background: "#000000", borderRadius: "24px", border: "1px solid rgba(255,255,255,0.1)" }}>
+        <CheckCircle2 size={48} style={{ color: "#FFF700", marginBottom: "16px" }} />
+        <h3 style={{ fontSize: "24px", marginBottom: "10px" }}>Thanks for reaching out!</h3>
+        <p style={{ color: "#9ca3af", marginBottom: "20px" }}>Your enquiry has been received. Our team will get back to you shortly.</p>
+        <button className="btn btn-primary" onClick={() => setSubmitted(false)}>Send another enquiry</button>
       </div>
     );
-
   }
 
-
   return (
+    <form onSubmit={handleSubmit} style={{ background: "#000000", padding: "35px", borderRadius: "24px", border: "1px solid rgba(255,255,255,0.1)" }}>
+      <label style={{ display: "block", fontSize: "13px", fontWeight: "800", marginBottom: "16px" }}>
+        Your name
+        <input required placeholder="Your name" style={{ display: "block", width: "100%", marginTop: "8px", background: "transparent", border: "1px solid rgba(255,255,255,0.2)", borderRadius: "12px", padding: "14px", color: "#fff", outline: "none" }} />
+      </label>
 
-    <form
-      className="contact-form"
-      onSubmit={handleSubmit}
-    >
-
-      {/* ================= NAME ================= */}
-
-      <div className="form-row">
-
-        <label>
-
-          First name
-
-          <input
-            type="text"
-            required
-            placeholder="Your name"
-          />
-
-        </label>
-
-
-        <label>
-
-          Last name
-
-          <input
-            type="text"
-            placeholder="Your surname"
-          />
-
-        </label>
-
-      </div>
-
-
-      {/* ================= EMAIL ================= */}
-
-      <label>
-
+      <label style={{ display: "block", fontSize: "13px", fontWeight: "800", marginBottom: "16px" }}>
         Work email
-
-        <input
-          type="email"
-          required
-          placeholder="you@company.com"
-        />
-
+        <input required type="email" placeholder="you@company.com" style={{ display: "block", width: "100%", marginTop: "8px", background: "transparent", border: "1px solid rgba(255,255,255,0.2)", borderRadius: "12px", padding: "14px", color: "#fff", outline: "none" }} />
       </label>
 
-
-      {/* ================= COMPANY ================= */}
-
-      <label>
-
-        Company
-
-        <input
-          type="text"
-          placeholder="Company name"
-        />
-
-      </label>
-
-
-      {/* ================= WEBSITE ================= */}
-
-      <label>
-
-        Website
-
-        <input
-          type="url"
-          placeholder="https://yourwebsite.com"
-        />
-
-      </label>
-
-
-      {/* ================= SERVICE ================= */}
-
-      <label>
-
-        What do you need help with?
-
-        <select
-          required
-          defaultValue=""
-        >
-
-          <option
-            value=""
-            disabled
-          >
-            Select a service
-          </option>
-
-          <option value="seo">
-            Search Engine Optimization
-          </option>
-
-          <option value="social-media">
-            Social Media Marketing
-          </option>
-
-          <option value="performance">
-            Performance Marketing
-          </option>
-
-          <option value="content">
-            Content Marketing
-          </option>
-
-          <option value="lead-generation">
-            Lead Generation
-          </option>
-
-          <option value="analytics">
-            Analytics & CRO
-          </option>
-
-          <option value="other">
-            Something else
-          </option>
-
-        </select>
-
-      </label>
-
-
-      {/* ================= MESSAGE ================= */}
-
-      <label>
-
+      <label style={{ display: "block", fontSize: "13px", fontWeight: "800", marginBottom: "24px" }}>
         Tell us about your goals
-
-        <textarea
-          required
-          rows="6"
-          placeholder="What are you trying to achieve?"
-        />
-
+        <textarea required rows="5" placeholder="What are you trying to achieve?" style={{ display: "block", width: "100%", marginTop: "8px", background: "transparent", border: "1px solid rgba(255,255,255,0.2)", borderRadius: "12px", padding: "14px", color: "#fff", outline: "none", resize: "vertical" }}></textarea>
       </label>
 
-
-      {/* ================= SUBMIT ================= */}
-
-      <button
-        type="submit"
-        className="btn btn-primary form-submit"
-      >
-
-        Send enquiry
-
-        <ArrowRight size={18} />
-
+      <button type="submit" className="btn btn-primary" style={{ width: "100%" }}>
+        Send enquiry <ArrowRight size={18} />
       </button>
-
-
-      <p className="form-disclaimer">
-        By submitting this form, you agree
-        to be contacted regarding your enquiry.
-      </p>
-
     </form>
-
   );
 }
