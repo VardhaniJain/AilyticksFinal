@@ -87,35 +87,6 @@ function Footer() {
   );
 }
 
-function Home() {
-  return (
-    <>
-      <section className="hero">
-        <div className="container hero-grid">
-          <div className="hero-copy">
-            <div className="pill"><Sparkles size={15} /> Strategy × Creativity × Data</div>
-            <h1>Make your brand <span>impossible to ignore.</span></h1>
-            <p>We are Ailyticks — a performance-focused digital marketing agency helping ambitious brands get discovered, build trust and convert attention into growth.</p>
-            <div className="hero-actions">
-              <Link className="btn btn-primary" to="/contact">Grow with Ailyticks <ArrowRight size={18} /></Link>
-              <Link className="btn btn-ghost" to="/services">Explore services <ChevronRight size={18} /></Link>
-            </div>
-          </div>
-          <div className="hero-visual">
-            <div className="orb orb-a"></div>
-            <div className="orb orb-b"></div>
-            <div className="dashboard-card">
-              <div className="dash-top"><span>Growth dashboard</span><span className="live">● LIVE</span></div>
-              <div className="metric"><small>Campaign performance</small><strong>+184%</strong><span>↑ 28.6% this month</span></div>
-              <div className="chart">{[1,2,3,4,5,6,7,8,9,10].map((item) => (<i key={item}></i>))}</div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </>
-  );
-}
-
 function About() {
   return (
     <section className="page-hero">
