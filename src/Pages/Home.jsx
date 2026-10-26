@@ -167,7 +167,6 @@ export default function Home() {
         <div className="container yellow-content">
           <p className="ready-eyebrow">READY WHEN YOU ARE</p>
           <h2>Your next customer is searching right now.</h2>
-          <h2>Your next customer is searching right now.</h2>
           <p className="yellow-desc">
             Let's make sure they find you. Tell us your goal and we'll show you the plan to reach it.
           </p>
@@ -181,7 +180,7 @@ export default function Home() {
             </a>
           </div>
 
-          <div className="yellow-perks">
+.          <div className="yellow-perks">
             <span>✓ Reply within one working day</span>
             <span>✓ No long services</span>
             <span>✓ Chatting firm day one</span>
