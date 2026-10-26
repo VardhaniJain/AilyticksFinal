@@ -33,7 +33,7 @@ export default function Contact() {
         <div style={{ display: "grid", gridTemplateColumns: "1.1fr 0.9fr", gap: "30px", alignItems: "start" }}>
           
           {/* Left Column: Form Box */}
-          <div style={{ background: "#FFFFFF", color: "#111827", padding: "40px", borderRadius: "28px", boxShadow: "0 20px 50px rgba(0,0,0,0.2)" }}>
+          <div style={{ background: "#FFFFFF", color: "#111827", padding: "40px", borderRadius: "28px", boxShadow: "0 20px 50px rgba(0,0,0,0.2)", textAlign: "left" }}>
             {submitted ? (
               <div style={{ textAlign: "center", padding: "40px 0" }}>
                 <CheckCircle2 size={54} style={{ color: "#07905d", marginBottom: "16px" }} />
@@ -119,7 +119,7 @@ export default function Contact() {
           </div>
 
           {/* Right Column: Info Card, Mock Map & Social Icons */}
-          <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: "24px", textAlign: "left" }}>
             
             {/* Contact Details Card */}
             <div style={{ background: "#000000", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "28px", padding: "30px", display: "flex", flexDirection: "column", gap: "20px" }}>
@@ -129,7 +129,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <span style={{ fontSize: "12px", color: "#9ca3af", display: "block" }}>Email</span>
-                  <strong style={{ fontSize: "15px", color: "#fff" }}>hello@youragency.com</strong>
+                  <strong style={{ fontSize: "15px", color: "#fff" }}>hello@ailyticks.com</strong>
                 </div>
               </div>
 
@@ -156,9 +156,7 @@ export default function Contact() {
 
             {/* Mock Map Box */}
             <div style={{ background: "#000000", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "28px", overflow: "hidden", position: "relative", height: "220px", display: "flex", flexDirection: "column", justifyContent: "flex-end", padding: "24px" }}>
-              {/* Grid Background Mock */}
               <div style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px)", backgroundSize: "40px 40px" }}></div>
-              {/* Curved line & location marker mock */}
               <svg style={{ position: "absolute", inset: 0, width: "100%", height: "100%" }} preserveAspectRatio="none" viewBox="0 0 400 200">
                 <path d="M0,150 Q150,80 280,100 T400,40" fill="none" stroke="rgba(255,255,255,0.2)" strokeWidth="3" />
               </svg>
@@ -167,7 +165,7 @@ export default function Contact() {
               <div style={{ position: "relative", zIndex: 2, display: "flex", justifyContent: "space-between", alignItems: "flex-end" }}>
                 <div>
                   <span style={{ fontSize: "12px", color: "#9ca3af", display: "block" }}>Our office</span>
-                  <strong style={{ fontSize: "14px", color: "#fff" }}>Street address, city, postal code</strong>
+                  <strong style={{ fontSize: "14px", color: "#fff" }}>Udaipur, Rajasthan, India</strong>
                 </div>
                 <a href="#map" style={{ color: "#FFF700", fontSize: "13px", fontWeight: "700", textDecoration: "none" }}>Open in maps →</a>
               </div>
