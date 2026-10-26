@@ -180,7 +180,7 @@ export default function Home() {
             </a>
           </div>
 
-.          <div className="yellow-perks">
+          <div className="yellow-perks">
             <span>✓ Reply within one working day</span>
             <span>✓ No long services</span>
             <span>✓ Chatting firm day one</span>
@@ -189,4 +189,4 @@ export default function Home() {
       </section>
     </>
   );
-}
+} 
