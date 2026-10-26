@@ -19,6 +19,9 @@ import { Routes, Route, Link } from "react-router-dom";
 // Import your modular pages
 import Contact from "./Pages/Contact";
 import Home from "./Pages/Home";
+import About from "./Pages/About";
+import Services from "./Pages/Services";
+import Work from "./Pages/work"; 
 function Navbar() {
   const [open, setOpen] = useState(false);
   return (
@@ -84,51 +87,6 @@ function Footer() {
         <span>Built for ambitious brands.</span>
       </div>
     </footer>
-  );
-}
-
-function About() {
-  return (
-    <section className="page-hero">
-      <div className="container">
-        <p className="eyebrow">ABOUT AILYTICKS</p>
-        <h1>We turn digital noise into meaningful growth.</h1>
-        <p>Ailyticks is a modern digital marketing agency built for brands that want more than vanity metrics.</p>
-      </div>
-    </section>
-  );
-}
-
-function Services() {
-  return (
-    <section className="page-hero">
-      <div className="container">
-        <p className="eyebrow">OUR SERVICES</p>
-        <h1>Everything you need to grow online.</h1>
-      </div>
-    </section>
-  );
-}
-
-function Work() {
-  return (
-    <section className="page-hero">
-      <div className="container">
-        <p className="eyebrow">SELECTED WORK</p>
-        <h1>Ideas are great. Results are better.</h1>
-      </div>
-    </section>
-  );
-}
-
-function Blog() {
-  return (
-    <section className="page-hero">
-      <div className="container">
-        <p className="eyebrow">INSIGHTS</p>
-        <h1>Ideas for marketers who want to grow smarter.</h1>
-      </div>
-    </section>
   );
 }
 
