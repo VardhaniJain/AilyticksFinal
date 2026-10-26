@@ -16,6 +16,9 @@ import {
 } from "lucide-react";
 import { Routes, Route, Link } from "react-router-dom";
 
+// Import your modular pages
+import Contact from "./Pages/Contact";
+
 function Navbar() {
   const [open, setOpen] = useState(false);
   return (
@@ -153,17 +156,6 @@ function Blog() {
       <div className="container">
         <p className="eyebrow">INSIGHTS</p>
         <h1>Ideas for marketers who want to grow smarter.</h1>
-      </div>
-    </section>
-  );
-}
-
-function Contact() {
-  return (
-    <section className="page-hero">
-      <div className="container">
-        <p className="eyebrow">LET'S TALK</p>
-        <h1>Have a growth goal? Let's make it real.</h1>
       </div>
     </section>
   );
