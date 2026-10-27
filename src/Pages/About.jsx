@@ -167,36 +167,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* Founders */}
-      <section className="about-section founders-section">
-        <h2 className="about-section-title">
-          Meet the <span>founders</span>
-        </h2>
-
-        <div className="founders-grid">
-          <article className="about-card founder-card">
-            <div className="founder-avatar founder-avatar-yellow">
-              AB
-            </div>
-
-            <div className="founder-info">
-              <h3>Founder name</h3>
-              <p>Strategy and clients</p>
-            </div>
-          </article>
-
-          <article className="about-card founder-card">
-            <div className="founder-avatar founder-avatar-white">
-              CD
-            </div>
-
-            <div className="founder-info">
-              <h3>Founder name</h3>
-              <p>Creative and campaigns</p>
-            </div>
-          </article>
-        </div>
-      </section>
 
       {/* Final Call to Action */}
       <section className="about-final-cta">
