@@ -24,6 +24,7 @@ import Footer from "./Components/Footer";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Services from "./Pages/Services";
+import Work from "./Pages/Work";
 import Contact from "./Pages/Contact";
 
 export default function App() {
@@ -36,6 +37,7 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/work" element={<Work />} />
         </Routes>
       </main>
       <Footer />
