@@ -72,7 +72,7 @@ export default function About() {
         </p>
 
         <Link to="/contact" className="about-button">
-          Book a free call
+          Book a call
         </Link>
       </section>
 
@@ -173,11 +173,11 @@ export default function About() {
         <div className="final-cta-copy">
           <h2>Be one of our first success stories</h2>
 
-          <p>Start with a free marketing audit.</p>
+          <p>Start with a marketing audit.</p>
         </div>
 
         <Link to="/contact" className="about-button">
-          Get my free audit
+          Get my audit
         </Link>
       </section>
     </div>
