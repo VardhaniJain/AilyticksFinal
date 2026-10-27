@@ -26,7 +26,7 @@ import About from "./Pages/About";
 import Services from "./Pages/Services";
 import Work from "./Pages/Work";
 import Contact from "./Pages/Contact";
-
+import Blog from "./Pages/Blog";
 export default function App() {
   return (
     <>
